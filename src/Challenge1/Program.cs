@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<TheAppContext>(opt => opt.UseInMemoryDatabase(DbData.DbName));
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

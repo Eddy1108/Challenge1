@@ -1,6 +1,7 @@
 using Challenge1.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Challenge1.ViewModels;
 
 namespace Challenge1.Controllers
 {
@@ -13,9 +14,10 @@ namespace Challenge1.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index()
+		public async Task<ViewResult> Index()
 		{
-			return View();
+			var homeModel = new HomeModel() {};
+			return View(homeModel);
 		}
 
 		public IActionResult Privacy()
