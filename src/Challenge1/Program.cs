@@ -1,3 +1,4 @@
+using Challenge1;
 using Challenge1.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<TheAppContext>(opt => opt.UseInMemoryDatabase(DbData.DbName));
+builder.Services.AddScoped<CustomerService>();
+
 
 var app = builder.Build();
 
