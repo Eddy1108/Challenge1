@@ -12,7 +12,7 @@ public class HomeController(/*ILogger<HomeController> logger*/ CustomerService c
 
     public async Task<ViewResult> Index()
     {
-        //get the customers from the database
+        //get the customers from the service
         var customers = await customerService.GetCustomers();
 
         var homeModel = new HomeModel()

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Challenge1
 {
-    public class CustomerService(TheAppContext appContext)
+    public class CustomerService(TheAppContext appContext) : ICustomerService
     {
         public async Task<List<CustomerDTO>> GetCustomers()
         {

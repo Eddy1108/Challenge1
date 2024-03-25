@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<TheAppContext>(opt => opt.UseInMemoryDatabase(DbData.DbName));
-builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 
 var app = builder.Build();
